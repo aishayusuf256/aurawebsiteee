@@ -832,3 +832,97 @@ body{
     border-radius: 999px;
   }
 }
+
+/* ===== HARD MOBILE NAV FIX (stops overlap) ===== */
+@media (max-width: 768px){
+
+  /* stop any absolute children escaping the bar */
+  header, header * { box-sizing: border-box; }
+
+  header{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: inherit;           /* keeps your pink */
+    padding: 12px 14px;
+    height: auto !important;       /* remove fixed height */
+    min-height: 0 !important;
+    overflow: hidden;              /* IMPORTANT: don’t let it spill out */
+  }
+
+  /* kill absolute positioning that causes overlap */
+  header nav,
+  header nav ul,
+  header .nav,
+  header .nav-links,
+  header .menu,
+  header .actions,
+  header .header-actions{
+    position: static !important;
+    float: none !important;
+  }
+
+  /* 3 clean rows: logo / links / buttons */
+  header{
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px;
+  }
+
+  /* logo centered */
+  header .logo,
+  header .brand,
+  header .site-logo{
+    width: 100%;
+    text-align: center;
+    margin: 0 !important;
+  }
+
+  /* links inside bar (2 columns so it never overflows) */
+  header nav ul,
+  header .nav-links,
+  header .menu{
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 14px;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none;
+    justify-items: center;
+  }
+
+  header nav a,
+  header .nav-links a,
+  header .menu a{
+    display: inline-block;
+    white-space: nowrap;           /* keeps “BATH & BODY” together */
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  /* cart + checkout inside bar */
+  header .actions,
+  header .header-actions,
+  header .nav-actions{
+    width: 100%;
+    display: flex !important;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  header .actions a,
+  header .header-actions a,
+  header .nav-actions a,
+  header .btn{
+    max-width: 100%;
+  }
+
+  /* dropdown menus must NOT overlay hero on mobile */
+  .dropdown-menu, .dropdown-content, .submenu{
+    position: static !important;
+    width: 100% !important;
+  }
+}
+
