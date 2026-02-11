@@ -703,3 +703,132 @@ body{
 .pay-btn:hover{
   background:#333;
 }
+
+/* ===== Contact page mobile fix ===== */
+@media (max-width: 768px){
+
+  /* general page spacing */
+  .page, .container, .wrap, main{
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  /* Contact title + text */
+  .contact-title, h1{
+    font-size: clamp(34px, 9vw, 52px);
+    line-height: 1.05;
+    word-break: break-word;
+  }
+
+  .contact-subtitle, .lead, .intro, p{
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  /* The 2 columns -> 1 column */
+  .contact-grid,
+  .contact-row,
+  .contact-columns,
+  .contact-content{
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    align-items: stretch;
+  }
+
+  /* Cards full width */
+  .contact-card,
+  .details-card,
+  .message-card,
+  .card{
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Inputs fit phone width */
+  input, textarea, select{
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    font-size: 16px; /* stops iPhone zoom */
+  }
+
+  /* Button fits */
+  button, .btn, .send-btn{
+    width: 100%;
+  }
+}
+
+/* ===== Mobile NAV fix ===== */
+@media (max-width: 768px){
+
+  /* stop side scrolling */
+  html, body { overflow-x: hidden; }
+
+  /* HEADER: make it wrap nicely */
+  header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 14px;
+  }
+
+  /* LOGO takes full row */
+  header .logo,
+  header .brand,
+  header .site-logo{
+    flex: 1 1 100%;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+
+  /* NAV LINKS row */
+  header nav,
+  header .nav,
+  header .nav-links{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  header nav ul,
+  header .nav-links{
+    display: flex;
+    flex-wrap: wrap;           /* THIS is the key */
+    justify-content: center;
+    gap: 10px 14px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  header nav a,
+  header .nav-links a{
+    font-size: 14px;
+    padding: 8px 10px;
+    white-space: nowrap;       /* keeps “Bath & Body” together */
+  }
+
+  /* CART + CHECKOUT row */
+  header .actions,
+  header .header-actions,
+  header .nav-actions{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  header .actions a,
+  header .header-actions a,
+  header .nav-actions a,
+  header .btn{
+    padding: 10px 14px;
+    font-size: 14px;
+    border-radius: 999px;
+  }
+}
