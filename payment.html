@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AURA | Checkout</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page-pink">
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">AURA</a>
+    <nav class="navlinks">
+      <a href="products.html">Fragrances</a>
+      <a href="bath.html">Bath & Body</a>
+      <a href="candles.html">Candles</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="actions">
+      <a class="pill" href="cart.html">Cart (<span id="basket-count">0</span>)</a>
+    </div>
+  </div>
+</header>
+
+<!-- PROGRESS -->
+<div class="checkout-progress">
+  <div class="progress-step progress-active"><div class="progress-circle">1</div> Cart</div>
+  <div class="progress-line"></div>
+  <div class="progress-step progress-active"><div class="progress-circle">2</div> Address</div>
+  <div class="progress-line"></div>
+  <div class="progress-step progress-active"><div class="progress-circle">3</div> Payment</div>
+  <div class="progress-line"></div>
+  <div class="progress-step"><div class="progress-circle">4</div> Complete</div>
+</div>
+
+<!-- MAIN WRAP -->
+<div class="checkout-wrap">
+
+  <!-- LEFT SIDE -->
+  <div class="checkout-box">
+    <div class="checkout-title">Checkout</div>
+
+    <form class="checkout-form" id="checkoutForm">
+
+      <div class="two">
+        <input required placeholder="Full Name">
+        <input required placeholder="Email Address">
+      </div>
+
+      <input required placeholder="Address Line 1">
+      <input placeholder="Address Line 2">
+
+      <div class="two">
+        <input required placeholder="City">
+        <input required placeholder="Postcode">
+      </div>
+
+      <input required placeholder="Phone Number">
+
+      <div class="payment-box">
+        <h3 style="font-family:var(--serif);margin-bottom:15px;">Payment Details</h3>
+
+        <input required placeholder="Cardholder Name">
+        <input required placeholder="Card Number">
+
+        <div class="two">
+          <input required placeholder="MM / YY">
+          <input required placeholder="CVC">
+        </div>
+      </div>
+
+      <button class="pay-btn" type="submit">Complete Payment</button>
+    </form>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="summary-box">
+    <div class="summary-title">Order Summary</div>
+    <div id="paymentSummary"></div>
+  </div>
+
+</div>
+
+<script src="js/app.js"></script>
+
+<script>
+const box = document.getElementById("paymentSummary");
+function money(n){return "£"+Number(n).toFixed(2);}
+
+function renderSummary(){
+  const cart = JSON.parse(localStorage.getItem("cart")||"[]");
+  if(cart.length===0){
+    box.innerHTML="<p>Your basket is empty.</p>";
+    return;
+  }
+  let total=0;
+  box.innerHTML = cart.map(i=>{
+    const line=i.price*i.qty; total+=line;
+    return `<div class="summary-item">
+      <span>${i.name} × ${i.qty}</span>
+      <strong>${money(line)}</strong>
+    </div>`;
+  }).join("") + `
+    <div class="summary-item summary-total">
+      <span>Total</span>
+      <strong>${money(total)}</strong>
+    </div>`;
+}
+renderSummary();
+
+document.getElementById("checkoutForm").addEventListener("submit",(e)=>{
+  e.preventDefault();
+  const cart = JSON.parse(localStorage.getItem("cart")||"[]");
+  localStorage.setItem("lastOrder", JSON.stringify(cart));
+  localStorage.removeItem("cart");
+  window.location.href="orders.html";
+});
+</script>
+
+</body>
+</html>

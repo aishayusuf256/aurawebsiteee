@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURA | Contact</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-cream">
+
+  <div class="bg-cream"></div>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">AURA</a>
+
+      <nav class="navlinks">
+        <a href="products.html">Shop All</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+
+      <div class="actions">
+        <a class="pill" href="products.html">Cart (<span id="basket-count">0</span>)</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding:50px 0;">
+    <h1 style="font-family:var(--serif); font-size:64px;">Contact Us</h1>
+    <p style="margin-top:12px; color:rgba(17,17,17,.75); line-height:1.8; max-width:760px;">
+      Reach out for order questions, collaborations, or product support. We respond quickly.
+     
+    </p>
+
+    <div style="margin-top:26px; display:grid; grid-template-columns: 1fr 1fr; gap:22px;">
+      <div style="background:#fff; border:1px solid var(--line); border-radius:10px; padding:18px;">
+        <h3 style="font-family:var(--serif); font-size:26px;">Details</h3>
+        <p style="margin-top:10px; line-height:1.9; color:rgba(17,17,17,.78);">
+          Email: info@aura.com<br>
+          Phone: 123-456-7890<br>
+          Location: London, UK<br>
+          Instagram: @aura
+        </p>
+      </div>
+
+      <div style="background:#fff; border:1px solid var(--line); border-radius:10px; padding:18px;">
+        <h3 style="font-family:var(--serif); font-size:26px;">Message</h3>
+        <form onsubmit="event.preventDefault(); alert('Message sent ✅ (demo)');" style="margin-top:12px; display:grid; gap:10px;">
+          <input required placeholder="Your name" style="height:42px;border:1px solid var(--line);border-radius:6px;padding:0 12px;">
+          <input required type="email" placeholder="Your email" style="height:42px;border:1px solid var(--line);border-radius:6px;padding:0 12px;">
+          <textarea required placeholder="Your message" style="min-height:120px;border:1px solid var(--line);border-radius:6px;padding:10px 12px;"></textarea>
+          <button class="pill" type="submit" style="width:160px; justify-self:start;">Send</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+  <section class="help-footer">
+    <div class="container help-inner">
+      
+      <div class="help-title">MAY WE HELP YOU?</div>
+      
+      <div class="help-links">
+        <a href="contact.html">Contact Us</a>
+        <a href="orders.html">My Orders</a>
+        <a href="faq.html">FAQs</a>
+       
+      </div>
+  
+    </div>
+  </section>
+  
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aura | Blog</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <video id="bg-video" autoplay muted loop playsinline preload="auto">
+    <source src="background.mp4" type="video/mp4" />
+  </video>
+  <div class="video-overlay"></div>
+  <div class="video-tint"></div>
+
+  <audio id="bg-music" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+  <button id="music-toggle" class="music-btn" aria-label="Toggle music">🔇</button>
+
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="Aura logo" />
+      <span>AURA</span>
+    </a>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="products.html#basket">Basket (<span id="basket-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" style="min-height: 55vh;">
+      <div class="container">
+        <h1 class="reveal">Blog</h1>
+        <p class="reveal">Scent tips, routines, and product picks.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="reveal">Latest posts</h2>
+
+        <div class="grid">
+          <div class="card reveal">
+            <img src="img/p2.jpg" alt="Perfume post" />
+            <div class="pad">
+              <h3>How to make perfume last longer</h3>
+              <p>Simple tricks: moisturise first, pulse points, layer scent.</p>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <img src="img/c1.jpg" alt="Candle post" />
+            <div class="pad">
+              <h3>How to burn candles properly</h3>
+              <p>First burn matters. Let it melt edge-to-edge to avoid tunnelling.</p>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <img src="img/b3.jpg" alt="Body care post" />
+            <div class="pad">
+              <h3>Soft-skin routine</h3>
+              <p>Exfoliate, hydrate, oil finish. Consistency = glow.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Aura. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURA</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <video id="bg-video" autoplay muted loop playsinline preload="auto">
+    <source src="background.mp4" type="video/mp4" />
+  </video>
+  <div class="video-tint"></div>
+  <div class="video-darken"></div>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">AURA</a>
+
+      <nav class="navlinks">
+        <a href="products.html">Fragrances</a>
+        <a href="bath.html">Bath & Body</a>   <!-- ADDED -->
+        <a href="candles.html">Candles</a>   <!-- ADDED -->
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="login.html">Log in</a>
+      </nav>
+
+      <div class="actions">
+        <a class="pill" href="cart.html">Cart (<span id="basket-count">0</span>)</a>
+        <a class="pill" href="payment.html">Checkout</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="stage">
+    <section class="stage-inner">
+      <div class="container hero-center">
+        <div class="hero-title">AURA</div>
+        <div class="hero-sub">
+          Your scent. Your energy. Clean luxury, premium visuals, and a smooth shopping journey.
+        </div>
+        <div class="hero-small">LONDON • ESTABLISHED 2025</div>
+
+        <!-- ✅ BUTTONS UPDATED HERE -->
+        <div class="hero-cta">
+          <a class="btn" href="products.html">Shop Fragrances</a>
+          <a class="btn" href="bath.html">Shop Bath & Body</a>
+          <a class="btn" href="candles.html">Shop Candles</a>
+          <a class="btn outline" href="#about">Learn More</a>
+        </div>
+
+        <div class="scrollhint"><span>↓</span> SCROLL</div>
+      </div>
+    </section>
+
+    <section class="limited">
+      <div class="container">
+        <div class="kicker">LIMITED EDITION</div>
+        <h2>Indulge in our exclusive collection of luxurious fragrances.</h2>
+        <p>Designed to be remembered — soft florals, clean musks, and rich signature finishes.</p>
+        <div style="margin-top:18px; display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+          <a class="btn" href="products.html">Shop Fragrances</a>
+          <a class="btn outline" href="cart.html">View Cart</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="section white" id="about">
+    <div class="container">
+      <h2>About AURA</h2>
+      <p>
+        AURA is built for presence. Every fragrance is curated to feel premium, clean, and unforgettable —
+        the type of scent people remember after you leave the room.
+      </p>
+      <p>
+        Minimal design. Strong product focus. Smooth checkout. Everything designed to feel luxury.
+      </p>
+      <a href="about.html" class="pill pill-primary" style="margin-top:18px; display:inline-block;">Learn More</a>
+    </div>
+  </section>
+
+  <section class="help-footer">
+    <div class="container help-inner">
+      <div class="help-title">MAY WE HELP YOU?</div>
+      <div class="help-links">
+        <a href="contact.html">Contact Us</a>
+        <a href="orders.html">My Orders</a>
+        <a href="faq.html">FAQs</a>
+      
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <h2>Stay Connected with Us</h2>
+      <p>Join the AURA newsletter for launches, limited drops, and scent guides.</p>
+
+      <form class="news" onsubmit="event.preventDefault();">
+        <input required type="email" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+      </form>
+
+      <div class="copy">© <span id="year"></span> AURA — Established 2025</div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

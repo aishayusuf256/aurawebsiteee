@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AURA | About</title>
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+/* ===== ABOUT HERO ===== */
+
+.about-hero{
+display:grid;
+grid-template-columns: 1fr 1fr;
+gap:70px;
+align-items:center;
+padding:80px 0;
+}
+
+.about-title{
+font-family:var(--serif);
+font-size:72px;
+line-height:1;
+}
+
+.about-text{
+margin-top:20px;
+line-height:1.9;
+color:rgba(17,17,17,.75);
+max-width:520px;
+}
+
+/* logo image */
+
+.about-img{
+width:100%;
+border-radius:22px;
+}
+
+/* VALUES */
+
+.values{
+margin-top:80px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.value-card{
+background:#fff;
+padding:30px;
+border-radius:18px;
+border:1px solid rgba(0,0,0,.08);
+}
+
+.value-card h3{
+font-family:var(--serif);
+margin-bottom:10px;
+}
+
+/* STORY */
+
+.story{
+margin-top:90px;
+background:#fff;
+padding:60px;
+border-radius:22px;
+border:1px solid rgba(0,0,0,.08);
+line-height:1.9;
+color:rgba(17,17,17,.75);
+}
+
+/* mobile */
+
+@media(max-width:900px){
+
+.about-hero{
+grid-template-columns:1fr;
+}
+
+.values{
+grid-template-columns:1fr;
+}
+
+.about-title{
+font-size:52px;
+}
+
+}
+
+</style>
+</head>
+
+<body class="page-pink">
+
+
+<header class="navbar">
+<div class="container nav-inner">
+<a class="brand" href="index.html">AURA</a>
+
+<nav class="navlinks">
+<a href="products.html">Fragrances</a>
+<a href="bath.html">Bath & Body</a>
+<a href="candles.html">Candles</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact Us</a>
+<a href="login.html">Log in</a>
+</nav>
+
+<div class="actions">
+<a class="pill" href="cart.html">Cart</a>
+<a class="pill" href="payment.html">Checkout</a>
+</div>
+</div>
+</header>
+
+
+
+<main class="container">
+
+<!-- HERO -->
+<section class="about-hero">
+
+<div>
+<div class="about-title">
+The World of AURA
+</div>
+
+<p class="about-text">
+AURA was created with a simple vision — to design fragrances that feel effortless, modern, and unforgettable. Every scent is crafted to enhance presence without overwhelming it, blending softness with confidence.
+</p>
+
+<p class="about-text">
+Our collections are inspired by femininity, calm luxury, and everyday elegance. From fresh florals to warm musks, each product is designed to leave a lasting impression.
+</p>
+
+</div>
+
+<img src="img/logo.png" class="about-img">
+
+</section>
+
+
+
+<!-- VALUES -->
+<section class="values">
+
+<div class="value-card">
+<h3>Crafted With Intention</h3>
+<p>
+Each AURA fragrance is carefully balanced to feel refined yet wearable — created for those who appreciate subtle luxury.
+</p>
+</div>
+
+<div class="value-card">
+<h3>Modern Elegance</h3>
+<p>
+We believe fragrance should complement your identity, not overpower it. Clean compositions and timeless notes define every collection.
+</p>
+</div>
+
+<div class="value-card">
+<h3>Signature Presence</h3>
+<p>
+AURA is more than scent — it is a feeling. Soft, confident, and designed to be remembered.
+</p>
+</div>
+
+</section>
+
+
+
+<!-- STORY -->
+<section class="story">
+
+<h2 style="font-family:var(--serif); margin-bottom:20px;">
+Our Story
+</h2>
+
+<p>
+Founded in 2025, AURA was built around the idea that luxury should feel natural and accessible. We set out to create fragrances that transition seamlessly from day to evening — scents that become part of your signature.
+</p>
+
+<br>
+
+<p>
+Every bottle reflects our commitment to simplicity, beauty, and quality. From fragrance to packaging, we focus on details that elevate the everyday experience.
+</p>
+
+<br>
+
+<p>
+As AURA continues to grow, our mission remains the same: to design products that inspire confidence, comfort, and quiet sophistication.
+</p>
+
+</section>
+
+</main>
+
+
+
+<section class="help-footer">
+<div class="container help-inner">
+
+<div class="help-title">
+MAY WE HELP YOU?
+</div>
+
+<div class="help-links">
+<a href="contact.html">Contact Us</a>
+<a href="orders.html">My Orders</a>
+<a href="faq.html">FAQs</a>
+
+</div>
+
+</div>
+</section>
+
+
+
+<footer class="footer">
+<div class="container">
+
+<h2>Stay Connected with Us</h2>
+
+<form class="news">
+<input placeholder="Enter your email">
+<button>Subscribe</button>
+</form>
+
+<div class="copy">
+© 2025 AURA — Established 2025
+</div>
+
+</div>
+</footer>
+  
+</body>
+</html>

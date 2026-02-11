@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURA | Product</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="page-pink">
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">AURA</a>
+
+      <nav class="navlinks">
+        <a href="products.html">Fragrances</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="login.html">Log in</a>
+      </nav>
+
+      <div class="actions">
+        <a class="pill" href="cart.html">Cart (<span id="basket-count">0</span>)</a>
+        <a class="pill" href="payment.html">Checkout</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="detail-wrap">
+    <div class="container">
+      <div class="detail-shell" id="productShell">
+
+        <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+          <div class="breadcrumbs">
+            <a href="products.html" style="color:rgba(17,17,17,.72); text-decoration:none;">Fragrances</a>
+            <span style="opacity:.55;"> / </span>
+            <span id="crumbName">Product</span>
+          </div>
+
+          <div class="breadcrumbs">
+            <a id="prevLink" href="#" style="color:rgba(17,17,17,.75); text-decoration:none;">‹ Prev</a>
+            <span style="opacity:.6;"> | </span>
+            <a id="nextLink" href="#" style="color:rgba(17,17,17,.75); text-decoration:none;">Next ›</a>
+          </div>
+        </div>
+
+        <div class="detail-grid">
+          <div class="detail-img">
+            <img id="prodImg" src="img/hero-perfume.jpg" alt="Product image">
+          </div>
+
+          <div class="detail-info">
+            <h1 id="prodName">Product Name</h1>
+            <div class="dprice" id="prodPrice">£0.00</div>
+
+            <div class="field">
+              <div class="label">Size *</div>
+              <select class="select" id="sizeSelect">
+                <option value="30ml">30ml</option>
+                <option value="50ml" selected>50ml</option>
+                <option value="100ml">100ml</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <div class="label">Quantity *</div>
+              <div class="qtyrow">
+                <button class="qtybtn" id="qtyMinus" type="button">−</button>
+                <input class="qtyval" id="qtyVal" value="1" inputmode="numeric">
+                <button class="qtybtn" id="qtyPlus" type="button">+</button>
+              </div>
+            </div>
+
+            <button class="addbtn" id="addToCart" type="button">Add to Cart</button>
+
+            <div class="detail-desc" id="prodDesc"></div>
+
+            <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
+              <a class="pill" href="products.html">Back to Fragrances</a>
+              <a class="pill pill-primary" href="payment.html">Checkout</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <section class="help-footer">
+    <div class="container help-inner">
+      <div class="help-title">MAY WE HELP YOU?</div>
+      <div class="help-links">
+        <a href="contact.html">Contact Us</a>
+        <a href="orders.html">My Orders</a>
+        <a href="faq.html">FAQs</a>
+     
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <h2>Stay Connected with Us</h2>
+      <p>Join the AURA newsletter for launches, limited drops, and scent guides.</p>
+      <form class="news" onsubmit="event.preventDefault();">
+        <input required type="email" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="copy">© <span id="year"></span> AURA — Established 2025</div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
